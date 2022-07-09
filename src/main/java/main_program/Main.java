@@ -1,7 +1,6 @@
 package main_program;
 
 import dishes.builders.OrderBuilder;
-import dishes.builders.PizzaBuilder;
 import dishes.desserts.Cake;
 import dishes.drinks.Water;
 import dishes.first_dishe.Soup;
@@ -31,9 +30,9 @@ public class Main {
 //                .addSecondDish(new Burger())
 //                .build();
 
-//        Pizza pizza1 = makePizza();
-//
-//        System.out.println(pizza1.toString());
+        Pizza pizza1 = makePizza();
+
+        System.out.println(pizza1.toString());
 
         Burger burger1 = Burger.builder().addIngredient(new Ingredient(IngredientType.BEEF, "sup", LocalDateTime.now(), LocalDateTime.now())).build();
         System.out.println(burger1.toString());
@@ -46,7 +45,7 @@ public class Main {
     }
 
     public static Pizza makePizza() {
-        PizzaBuilder pizzaBuilder = new PizzaBuilder();
+        Pizza.PizzaBuilder pizzaBuilder = Pizza.builder();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
